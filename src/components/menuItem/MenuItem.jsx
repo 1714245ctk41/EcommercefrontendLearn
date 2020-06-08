@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 
 const MenuItem = ({ title, imageUrl, history, linkUrl, match }) => (
   // {/* start menu-iteme */ }
-  <div div className="menu-item">
+  <div className="menu-item">
     <div className="content">
       <img src={imageUrl} alt="" />
       <div className="subtitle">

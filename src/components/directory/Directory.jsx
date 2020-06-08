@@ -8,46 +8,47 @@ class Directory extends Component {
     this.state = {
       sections: [
         {
-          title: "VEGETABLE",
+          title: "VEGETABLES",
           imageUrl: "./images/catbox-hom4-5.jpg",
           id: 1,
           linkUrl: "vegetable",
         },
         {
-          title: "DRINK",
-          imageUrl: "./images/backiee-106925.jpg",
+          title: "DRINK & ICE",
+          imageUrl: "./images/drinkice/backiee-106925.jpg",
           id: 2,
           linkUrl: "drink",
         },
         {
           title: "FRESH MEAT",
-          imageUrl: "./images/backiee-86720.jpg",
+          imageUrl: "./images/freshmeat/backiee-86720.jpg",
           id: 3,
           linkUrl: "fresh meat",
         },
         {
           title: "JUICE",
-          imageUrl: "./images/8f5ab40639f89696abb7b832b91d61fa.jpg",
+          imageUrl: "./images/juice/8f5ab40639f89696abb7b832b91d61fa.jpg",
           id: 4,
           linkUrl: "juice",
         },
         {
-          title: "BREAD",
-          imageUrl: "./images/ca6e631267ddae063a54a0918607fb5e.jpg",
+          title: "BREAD & CAKE",
+          imageUrl: "./images/breadcake/ca6e631267ddae063a54a0918607fb5e.jpg",
           id: 1,
           linkUrl: "bread",
         },
       ],
     };
   }
+
   render() {
     return (
       <div className="row">
-        <section id="photos">
+        <div id="photos">
           {this.state.sections.map(({ id, ...otherSectionProps }) => (
             <MenuItem key={id} {...otherSectionProps} />
           ))}
-        </section>
+        </div>
       </div>
     );
   }
