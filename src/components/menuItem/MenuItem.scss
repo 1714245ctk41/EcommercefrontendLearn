@@ -1,7 +1,8 @@
 /* Create four equal columns that sits next to each other */
 /* Responsive layout - makes a two column-layout instead of four columns */
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-.subtitle {
+
+.subtitle-1 {
   span {
     i {
       display: inline-block;
@@ -57,10 +58,10 @@ h1.title {
   left: 7%;
   z-index: 2;
   color: #fff;
-  transition: letter-spacing 0.5s ease-out, font-size 0.5s ease-out,
-    top 0.5s ease-out;
+  transition: letter-spacing 0.3s ease-out, font-size 0.3s ease-out,
+    top 0.3s ease-out;
 }
-.menu-item {
+.menu-item-1 {
   position: relative;
   &:not(:first-child) {
     margin-top: 10px;

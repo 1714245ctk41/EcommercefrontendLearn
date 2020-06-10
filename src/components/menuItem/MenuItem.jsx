@@ -4,10 +4,10 @@ import { withRouter } from "react-router-dom";
 
 const MenuItem = ({ title, imageUrl, history, linkUrl, match }) => (
   // {/* start menu-iteme */ }
-  <div className="menu-item">
+  <div className="menu-item-1">
     <div className="content">
       <img src={imageUrl} alt="" />
-      <div className="subtitle">
+      <div className="subtitle-1">
         <div
           className="subtitle-contain"
           onClick={() => history.push(`${match.url}${linkUrl}`)}

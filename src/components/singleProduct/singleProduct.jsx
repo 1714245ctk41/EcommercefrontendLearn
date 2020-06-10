@@ -25,7 +25,7 @@ const SingleProduct = ({ id, imageUrl, name, price }) => {
             <i className="far fa-eye"></i>
           </span>
           <span>
-            <i className="far fa-heart"></i>
+            <i className="fas fa-heart"></i>
           </span>
         </div>
       </div>

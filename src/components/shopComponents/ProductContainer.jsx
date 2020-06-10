@@ -2,7 +2,7 @@ import React from "react";
 import SHOP_DATA from "../../pages/shop/shopData";
 import "./ProductContainer.scss";
 import SingleProduct from "../singleProduct/singleProduct";
-import ChooseCategory from "./ChooseCategory";
+// import ChooseCategory from "./ChooseCategory";
 
 class ProductContainer extends React.Component {
   constructor(props) {

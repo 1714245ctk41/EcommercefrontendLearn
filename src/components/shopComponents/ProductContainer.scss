@@ -1,56 +1,48 @@
 /* tao row reponsive */
-.row {
-  width: 100%;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: 75.75862em;
-}
 
-.columns {
-  position: relative;
-  padding-left: 10px;
-  padding-right: 10px;
-  float: left;
-}
-@media only screen and (max-width: 60.62069em) and (min-width: 42.96552em) {
-  body {
-    .row {
-      .medium-4 {
-        width: 33.33333333%;
-      }
-    }
-  }
-}
-@media only screen and (min-width: 52.96552em) {
-  .large-3 {
-    position: relative;
-    width: 25%;
-  }
-  .large-12 {
-    position: relative;
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 52.96552em) {
-  .small-6 {
-    position: relative;
-    width: 50%;
-  }
-  .detail-product {
-    .trendyItem-product-item.columns.large-3.medium-4.small-6 {
-      left: 24% !important;
-      margin-top: 30px;
-    }
-  }
-}
+// .columns {
+//   position: relative;
+//   padding-left: 10px;
+//   padding-right: 10px;
+//   float: left;
+// }
+// @media only screen and (max-width: 60.62069em) and (min-width: 42.96552em) {
+//   body {
+//     .row {
+//       .medium-4 {
+//         width: 33.33333333%;
+//       }
+//     }
+//   }
+// }
+// @media only screen and (min-width: 52.96552em) {
+//   .large-3 {
+//     position: relative;
+//     width: 25%;
+//   }
+//   .large-12 {
+//     position: relative;
+//     width: 100%;
+//   }
+// }
+// @media only screen and (max-width: 52.96552em) {
+//   .small-6 {
+//     position: relative;
+//     width: 50%;
+//   }
+//   .detail-product {
+//     .trendyItem-product-item.columns.large-3.medium-4.small-6 {
+//       left: 24% !important;
+//       margin-top: 30px;
+//     }
+//   }
+// }
 
 .category-item {
   height: 70px;
   background-color: #b7b7b7;
   margin-bottom: 10px;
-  border-radius: 15px;
+
   cursor: pointer;
   span {
     line-height: 30px;
@@ -60,12 +52,31 @@
     color: #fff;
   }
   &:hover {
-    background-color: #565656;
+    background-color: #565656d1 !important;
+  }
+  &:nth-child(1) {
+    background-color: #0000ff9c;
+  }
+  &:nth-child(2) {
+    background-color: #32cd32;
+  }
+  &:nth-child(3) {
+    background-color: #00bfff;
+  }
+  &:nth-child(4) {
+    background-color: #ffd700;
+  }
+  &:nth-child(5) {
+    background-color: #ff00ff;
+  }
+  &:nth-child(6) {
+    background-color: #a0522d;
   }
 }
+
 .row {
   padding: 0 10px;
 }
 .active {
-  background-color: #565656;
+  background-color: #565656ed !important;
 }

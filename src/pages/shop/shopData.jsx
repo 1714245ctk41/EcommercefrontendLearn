@@ -7,7 +7,7 @@ const SHOP_DATA = [
       {
         id: 1,
         name: "Mango",
-        imageUrl: "./images/vegetables/2.jpg",
+        imageUrl: "./images/vegetables/5dbe557f30265d4765c876ca04d8699e.jpg",
         price: 25,
       },
       {
@@ -19,7 +19,7 @@ const SHOP_DATA = [
       {
         id: 3,
         name: "persimmon",
-        imageUrl: "./images/vegetables/4-200x200.jpg",
+        imageUrl: "./images/vegetables/edc2b5daa82eb80db5ea925bf332824c.jpg",
         price: 35,
       },
       {
@@ -37,7 +37,7 @@ const SHOP_DATA = [
       {
         id: 6,
         name: "Palm Tree Cap",
-        imageUrl: "./images/vegetables/8-311x311.jpg",
+        imageUrl: "./images/vegetables/ea4da7610e5d07e24299e9041cdf90e9.jpg",
         price: 14,
       },
       {

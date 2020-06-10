@@ -1,8 +1,10 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import HomePage from "../pages/HomePage/homepage";
 import { Switch, Route } from "react-router-dom";
 import ShopPage from "../pages/shop/shop";
+// import "./../components/LoginRegis/LoginRegister.scss";
+// import "./../pages/LoginRegis/LoginRegis.scss";
 
 class App extends React.Component {
   render() {
