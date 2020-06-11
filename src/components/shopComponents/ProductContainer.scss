@@ -42,6 +42,20 @@
   height: 70px;
   background-color: #b7b7b7;
   margin-bottom: 10px;
+  position: relative;
+  &:after {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1em;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+  }
 
   cursor: pointer;
   span {
@@ -79,4 +93,7 @@
 }
 .active {
   background-color: #565656ed !important;
+  &:after {
+    opacity: 1;
+  }
 }

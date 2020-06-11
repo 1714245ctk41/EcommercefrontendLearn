@@ -2,11 +2,17 @@
   width: 100%;
   height: 100%;
   position: fixed;
-
+  display: none;
   z-index: 20;
-  opacity: 1;
+  opacity: 0;
   z-index: 98;
   transition: opacity 0.5s ease-out;
+  .option {
+    cursor: pointer;
+  }
+  .block-signout {
+    margin-bottom: 3em;
+  }
 }
 .override-logreg {
   background-color: #11111182;
@@ -14,4 +20,18 @@
   width: 100%;
   height: 100%;
   z-index: 99;
+}
+.logreg {
+  h2 {
+    cursor: pointer;
+    margin-top: 2em;
+  }
+  span {
+    &:hover {
+      color: #ff8c00;
+    }
+  }
+}
+.logreg-changeForm-active {
+  color: #ff8c00;
 }

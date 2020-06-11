@@ -1,7 +1,9 @@
 import React from "react";
 
 import "./LoginRegis.scss";
+import Register from "../../components/LoginRegis/Register";
 import Login from "../../components/LoginRegis/Login";
+import { auth } from "../../firebase/firebase.utils";
 
 function close() {
   document.getElementsByClassName("logreg-container")[0].style.opacity = 0;
@@ -13,11 +15,66 @@ function close() {
   );
 }
 
-const LoginRegis = () => (
-  <div className="logreg-container">
-    <Login />
-    <div className="override-logreg" onClick={close} />
-  </div>
-);
+class LoginRegis extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      changeForm: true,
+    };
+  }
+  handleChangeForm = (evt) => {
+    const logregChangeForm = document.getElementsByClassName(
+      "logreg-changeForm"
+    );
+    for (let i = 0; i < logregChangeForm.length; i++) {
+      logregChangeForm[i].className = logregChangeForm[i].className.replace(
+        "logreg-changeForm-active",
+        ""
+      );
+    }
+    evt.target.className += " logreg-changeForm-active";
+    this.setState({
+      changeForm: !this.state.changeForm,
+    });
+  };
+  render() {
+    return (
+      <div className="logreg-container">
+        <div className="logreg">
+          {this.props.currentUser ? (
+            <div className="block-signout">
+              <h2>Hello {this.props.currentUser.displayName}</h2>
+              <span className="option" onClick={() => auth.signOut()}>
+                SIGN OUT
+              </span>
+            </div>
+          ) : (
+            <div>
+              <h2>
+                {" "}
+                <span
+                  className="logreg-changeForm logreg-changeForm-active"
+                  onClick={this.handleChangeForm}
+                >
+                  Login
+                </span>{" "}
+                |{" "}
+                <span
+                  className="logreg-changeForm"
+                  onClick={this.handleChangeForm}
+                >
+                  Register
+                </span>
+              </h2>
+              {this.state.changeForm ? <Login /> : <Register />}
+            </div>
+          )}
+        </div>
+
+        <div className="override-logreg" onClick={close} />
+      </div>
+    );
+  }
+}
 
 export default LoginRegis;

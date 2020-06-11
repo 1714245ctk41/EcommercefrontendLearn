@@ -1,34 +1,34 @@
+@mixin shrinkLabel {
+  transform: translateY(-140%);
+  font-size: 13px;
+}
+.shrink {
+  transform: translateY(-140%);
+  font-size: 13px;
+}
 .logreg {
   text-align: center;
   display: block;
   letter-spacing: 1px;
   position: absolute;
   width: 35em;
-  height: 21em;
+  height: auto;
   background-color: #fff;
   z-index: 100;
-  top: 50%;
+  top: 40%;
   left: 50%;
   text-align: center;
 
   transform: translate(-50%, -50%);
   td.logreg-input-container {
     position: relative;
-  }
-  th {
-    height: 80px;
+    height: 60px;
   }
 
   table {
-    margin: 22px auto;
+    margin: 22px auto 3.5em;
     width: 88%;
-  }
-  label {
-    position: absolute;
-    left: 0;
-    top: 35%;
-    z-index: -1;
-    transition: font-size 0.2s ease-out, transform 0.2s ease-out;
+    padding: 0 20px;
   }
 
   .close-block {
@@ -38,52 +38,5 @@
     right: 0;
     top: 0;
     cursor: pointer;
-  }
-  input {
-    border: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-color: transparent;
-    padding: 10px 10px 10px 0px;
-    &:focus {
-      outline: 0;
-      & ~ .underline {
-        &:after {
-          width: 100%;
-        }
-      }
-      & + label {
-        transform: translateY(-140%);
-        font-size: 13px;
-      }
-    }
-    &:valid {
-      & + label {
-        transform: translateY(-140%);
-        font-size: 13px;
-      }
-    }
-    & ~ .underline {
-      &:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        bottom: 30%;
-        height: 1px;
-        background-color: #11111124;
-        left: 0;
-      }
-      &:after {
-        content: "";
-        position: absolute;
-        width: 0;
-        bottom: 30%;
-        height: 1px;
-        background-color: #ff0000;
-        left: 0;
-        transition: width 0.2s ease-out;
-      }
-    }
   }
 }

@@ -2,8 +2,6 @@ import React from "react";
 import SHOP_DATA from "./shopData";
 import "./shop.scss";
 import ProductContainer from "../../components/shopComponents/ProductContainer";
-import Header from "../../components/header/Header";
-import LoginRegis from "../LoginRegis/LoginRegis";
 
 class ShopPage extends React.Component {
   constructor(props) {
@@ -16,8 +14,8 @@ class ShopPage extends React.Component {
   render() {
     return (
       <div>
-        <LoginRegis />
-        <Header />
+        <div className="divide"></div>
+
         <div className="divide"></div>
         <ProductContainer />
       </div>

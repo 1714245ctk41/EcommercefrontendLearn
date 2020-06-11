@@ -1,6 +1,7 @@
 import React from "react";
 import "./Header.scss";
 import { Link } from "react-router-dom";
+
 // const showAll = (evt) => {
 //   const cateLink = document.getElementsByClassName("menu-item");
 
@@ -9,15 +10,17 @@ import { Link } from "react-router-dom";
 //   }
 //   evt.currentTarget.className += " menu-active";
 // };
-// function close() {
-//   document.getElementsByClassName("logreg-container")[0].style.opacity = 1;
-//   setTimeout(
-//     () =>
-//       (document.getElementsByClassName("logreg-container")[0].style.display =
-//         "block"),
-//     500
-//   );
-// }
+function openLogin() {
+  document.getElementsByClassName("logreg-container")[0].style.display =
+    "block";
+  setTimeout(
+    () =>
+      (document.getElementsByClassName(
+        "logreg-container"
+      )[0].style.opacity = 1),
+    300
+  );
+}
 
 const Header = () => (
   <nav className="menu">
@@ -49,12 +52,13 @@ const Header = () => (
     </a>
     <a href="google.com" className="menu-item">
       {" "}
-      <i className="fas fa-shopping-bag" />{" "}
+      <i className="fas fa-shopping-bag" />
+      {/* <sup>1</sup> */}
     </a>
-    {/* <p href="google.com" className="menu-item">
+    <p href="google.com" className="menu-item" onClick={openLogin}>
       {" "}
       <i className="fas fa-user" />{" "}
-    </p> */}
+    </p>
   </nav>
 );
 
