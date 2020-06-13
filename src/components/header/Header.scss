@@ -29,13 +29,15 @@
   text-align: center;
   line-height: 60px;
   transform: translate3d(0, 0, 0);
-  transition: transform ease-out 200ms;
+  transition: background-color 200ms ease-out, color 200ms ease-out,
+    font-size 200ms ease-out, transform 200ms ease-out;
 
   cursor: pointer;
 
   &:hover {
     background: white;
     color: #ff0000;
+    font-size: 1.5em;
   }
   &:nth-child(3) {
     transition-duration: 180ms;

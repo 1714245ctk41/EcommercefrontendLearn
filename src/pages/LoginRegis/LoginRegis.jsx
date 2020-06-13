@@ -4,6 +4,7 @@ import "./LoginRegis.scss";
 import Register from "../../components/LoginRegis/Register";
 import Login from "../../components/LoginRegis/Login";
 import { auth } from "../../firebase/firebase.utils";
+import { connect } from "react-redux";
 
 function close() {
   document.getElementsByClassName("logreg-container")[0].style.opacity = 0;
@@ -77,4 +78,7 @@ class LoginRegis extends React.Component {
   }
 }
 
-export default LoginRegis;
+const mapStateToProps = (state) => ({
+  currentUser: state.user.currentUser,
+});
+export default connect(mapStateToProps)(LoginRegis);
