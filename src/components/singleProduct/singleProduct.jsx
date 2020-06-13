@@ -1,7 +1,10 @@
 import React from "react";
 import "./singleProduct.scss";
+import { connect } from "react-redux";
+import { addItem } from "../../redux/cart/CartActions";
 
-const SingleProduct = ({ id, imageUrl, name, price }) => {
+const SingleProduct = ({ item, addItem }) => {
+  const { id, imageUrl, name, price } = item;
   return (
     <div key={id} className="product-tab ">
       <div className="product-tab_image">
@@ -18,7 +21,7 @@ const SingleProduct = ({ id, imageUrl, name, price }) => {
 
       <div className="product-tab-nav">
         <div className="product-tab-nav-content">
-          <span>
+          <span onClick={() => addItem(item)}>
             <i className="fas fa-shopping-bag"></i>
           </span>
           <span>
@@ -38,4 +41,8 @@ const SingleProduct = ({ id, imageUrl, name, price }) => {
   // *<!--kết thúc một sản phẩm-- >
 };
 
-export default SingleProduct;
+const mapDispatchToProps = (dispatch) => ({
+  //* passing item vào addItem
+  addItem: (item) => dispatch(addItem(item)),
+});
+export default connect(null, mapDispatchToProps)(SingleProduct);

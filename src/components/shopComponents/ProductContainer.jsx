@@ -57,7 +57,9 @@ class ProductContainer extends React.Component {
             </div>
           ))}
           {shop_data.map((item, id) =>
-            item.items.map((it, index) => <SingleProduct key={it.id} {...it} />)
+            item.items.map((it, index) => (
+              <SingleProduct key={it.id} item={it} />
+            ))
           )}
         </div>
       </div>
