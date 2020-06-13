@@ -36,7 +36,10 @@
 
   &:hover {
     background: white;
-    color: #ff0000;
+    i,
+    span {
+      color: #ff0000;
+    }
     font-size: 1.5em;
   }
   &:nth-child(3) {
@@ -120,6 +123,8 @@
           transition-duration: 490ms;
           // transform: translate3d(440px, 0, 0);
           transform: translate3d(390px, 0, 0);
+          margin-top: 0;
+          margin-bottom: 0;
         }
         &:nth-child(7) {
           transition-duration: 490ms;

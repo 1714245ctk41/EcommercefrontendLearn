@@ -1,6 +1,9 @@
 import React from "react";
 import "./Header.scss";
 import { Link } from "react-router-dom";
+import CartIcon from "../cart/CartIcon";
+import CartDropdown from "../cart/CartDropdown";
+import { connect } from "react-redux";
 
 // const showAll = (evt) => {
 //   const cateLink = document.getElementsByClassName("menu-item");
@@ -22,7 +25,7 @@ function openLogin() {
   );
 }
 
-const Header = () => (
+const Header = ({ currentUser, hidden }) => (
   <nav className="menu">
     <input
       type="checkbox"
@@ -50,16 +53,19 @@ const Header = () => (
       {" "}
       <i className="fas fa-heart" />{" "}
     </a>
-    <a href="google.com" className="menu-item">
-      {" "}
-      <i className="fas fa-shopping-bag" />
-      {/* <sup>1</sup> */}
-    </a>
+    <CartIcon />
+
     <p href="google.com" className="menu-item" onClick={openLogin}>
       {" "}
       <i className="fas fa-user" />{" "}
     </p>
+    {hidden ? null : <CartDropdown />}
   </nav>
 );
 
-export default Header;
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+  currentUser,
+  hidden,
+});
+
+export default connect(mapStateToProps)(Header);

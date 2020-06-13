@@ -71,7 +71,9 @@ class LoginRegis extends React.Component {
             </div>
           )}
         </div>
-
+        <div className="close-block" onClick={this.close}>
+          <i className="fas fa-times"></i>
+        </div>
         <div className="override-logreg" onClick={close} />
       </div>
     );

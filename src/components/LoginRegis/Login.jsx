@@ -97,9 +97,6 @@ class Login extends React.Component {
             </tfoot>
           </table>
         </form>
-        <div className="close-block" onClick={this.close}>
-          <i className="fas fa-times"></i>
-        </div>
       </div>
     );
   }

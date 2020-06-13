@@ -1,0 +1,23 @@
+.cartDropdown-container {
+  background-color: #fff;
+  position: absolute;
+  left: 15%;
+  top: 100%;
+  width: 40vh;
+  height: 50vh;
+  padding: 20px;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  border: 1px solid #fdf2f2;
+  border-radius: 15px;
+  box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.35);
+
+  .cartDropdown-go-to-checkout {
+    background-color: #ffa500;
+    bottom: 0;
+    &:hover {
+      background-color: #de9000;
+    }
+  }
+}

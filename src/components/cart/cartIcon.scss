@@ -1,0 +1,14 @@
+.cartIcon {
+  i {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+  }
+  span {
+    position: absolute;
+    top: 0;
+    left: 70%;
+    font-weight: 700;
+  }
+}
