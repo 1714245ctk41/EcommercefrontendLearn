@@ -1,0 +1,26 @@
+.checkout-page {
+  text-align: center;
+  display: flex;
+
+  .checkout-total {
+    width: 30%;
+  }
+  .checkout-table {
+    width: 70%;
+  }
+  td {
+    width: 25%;
+  }
+  img {
+    width: 25%;
+  }
+  span {
+    display: inline-block;
+    width: 100%;
+  }
+  .checkout-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}

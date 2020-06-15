@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import CartIcon from "../cart/CartIcon";
 import CartDropdown from "../cart/CartDropdown";
 import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { selectCartHidden } from "../../redux/cart/CartSelectors";
+import { selectCurrentUser } from "../../redux/user/UserSelector";
 
 // const showAll = (evt) => {
 //   const cateLink = document.getElementsByClassName("menu-item");
@@ -63,9 +66,9 @@ const Header = ({ currentUser, hidden }) => (
   </nav>
 );
 
-const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
-  currentUser,
-  hidden,
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  hidden: selectCartHidden,
 });
 
 export default connect(mapStateToProps)(Header);
